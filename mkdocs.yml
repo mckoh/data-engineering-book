@@ -1,36 +1,9 @@
 site_name: Data Engineering Buch
+site_url: https://mckoh.github.io/data-engineering-book/
 site_dir: public
 site_author: Michael Kohlegger
 copyright: © 2020, MK
 strict: false
-
-# Theme specification
-theme:
-  name: material
-  icon:
-    logo: material/library
-
-extra_css:
-  - stylesheets/extra.css
-
-markdown_extensions:
-  - pymdownx.highlight:
-      linenums: true
-  - pymdownx.superfences:
-      # make exceptions to highlighting of code
-      # otherwise, mermaid images are shown as code
-      # box with regular syntax highlighting
-      custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: !!python/name:mermaid2.fence_mermaid
-
-# mermaid is used for visualization
-plugins:
-    - mermaid2
-
-extra_javascript:
-    - https://unpkg.com/mermaid/dist/mermaid.min.js
 
 # Navigation
 nav:
@@ -57,3 +30,30 @@ nav:
       - Mega-Tutorium RDBS: exercises/wcis_exercise_01_megatutorial.md
 
     - Über: about.md
+
+
+# Theme specification
+theme:
+  name: material
+  icon:
+    logo: material/library
+
+markdown_extensions:
+  - pymdownx.highlight:
+      linenums: true
+  - pymdownx.superfences:
+      # make exceptions to highlighting of code
+      # otherwise, mermaid images are shown as code
+      # box with regular syntax highlighting
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:mermaid2.fence_mermaid
+
+# mermaid is used for visualization
+plugins:
+    - mermaid2
+
+extra_javascript:
+    - https://unpkg.com/mermaid/dist/mermaid.min.js
+
