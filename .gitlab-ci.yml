@@ -1,0 +1,37 @@
+## original version
+# image: alpine:latest
+
+# pages:
+#   stage: deploy
+#   script:
+#   - echo 'Creating git book.'
+#   artifacts:
+#     paths:
+#     - public
+#   only:
+#   - main
+
+image: python:3.8-buster
+
+before_script:
+  - pip install -r requirements.txt
+
+test:
+  stage: test
+  script:
+  - mkdocs build --strict --verbose --site-dir test
+  artifacts:
+    paths:
+    - test
+  except:
+  - main
+
+pages:
+  stage: deploy
+  script:
+  - mkdocs build --strict --verbose
+  artifacts:
+    paths:
+    - public
+  only:
+  - main

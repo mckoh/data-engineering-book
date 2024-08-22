@@ -1,0 +1,59 @@
+site_name: Data Engineering Buch
+site_dir: public
+site_author: Michael Kohlegger
+copyright: © 2020, MK
+strict: false
+
+# Theme specification
+theme:
+  name: material
+  icon:
+    logo: material/library
+
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - pymdownx.highlight:
+      linenums: true
+  - pymdownx.superfences:
+      # make exceptions to highlighting of code
+      # otherwise, mermaid images are shown as code
+      # box with regular syntax highlighting
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:mermaid2.fence_mermaid
+
+# mermaid is used for visualization
+plugins:
+    - mermaid2
+
+extra_javascript:
+    - https://unpkg.com/mermaid/dist/mermaid.min.js
+
+# Navigation
+nav:
+    - Home: index.md
+    - Relational DBS Tutorial:
+      - Entitätstypen: mariadb_tutorial/entity.md
+      - 1:n Beziehung: mariadb_tutorial/onemany.md
+      - n:m Beziehung: mariadb_tutorial/manymany.md
+      - WITH-Klausel: mariadb_tutorial/with.md
+    - Other Tutorials:
+      - DBS Interaktion: dbs_interaction.md
+      - Data Engineering Checkliste: de_checklist.md
+      - Docker: docker.md
+    - Master Data Science & Intelligent Analytics:
+      - Mega-Tutorium RDBS: exercises/ds_exercise_01_megatutorial.md
+      - Individualaufgaben RDBS: exercises/ds_exercise_01_individuals.md
+      - Mega-Tutorium Neo4J: exercises/ds_exercise_02_megatutorial.md
+      - Individualaufgaben Neo4J: exercises/ds_exercise_02_individuals.md
+      - Mega-Tutorium MongoDB: exercises/ds_exercise_03_megatutorial.md
+      - Individualaufgaben MongoDB: exercises/ds_exercise_03_individuals.md
+      - Mega-Tutorium Cassandra: exercises/ds_exercise_04_megatutorial.md
+    
+    - Master Web Communication & Information Systems:
+      - Mega-Tutorium RDBS: exercises/wcis_exercise_01_megatutorial.md
+
+    - Über: about.md
