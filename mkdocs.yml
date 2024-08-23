@@ -25,10 +25,8 @@ nav:
       - Mega-Tutorium MongoDB: exercises/ds_exercise_03_megatutorial.md
       - Individualaufgaben MongoDB: exercises/ds_exercise_03_individuals.md
       - Mega-Tutorium Cassandra: exercises/ds_exercise_04_megatutorial.md
-
     - Master Web Communication & Information Systems:
       - Mega-Tutorium RDBS: exercises/wcis_exercise_01_megatutorial.md
-
     - Über: about.md
 
 
