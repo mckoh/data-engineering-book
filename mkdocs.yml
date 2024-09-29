@@ -7,6 +7,68 @@ site_author: Michael Kohlegger
 copyright: © 2020, MK
 strict: false
 
+theme:
+  name: material
+  icon:
+    logo: material/database
+  features:
+    - content.code.copy
+    - navigation.tabs
+    #- navigation.tabs.sticky
+    - navigation.sections
+    - navigation.path
+    - navigation.footer
+    - navigation.expand
+  color_mode: dark
+  palette:
+    primary: indigo # teal
+  shortcuts:
+    help: 191    # ?
+    next: 78     # n
+    previous: 80 # p
+    search: 83   # s
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/mckoh
+      name: Michael Kohlegger on Github
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      linenums: true
+      pygments_lang_class: true
+      auto_title: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.highlight
+
+markdown_extensions:
+  - pymdownx.highlight:
+      linenums: true
+  - pymdownx.superfences:
+      # make exceptions to highlighting of code
+      # otherwise, mermaid images are shown as code
+      # box with regular syntax highlighting
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:mermaid2.fence_mermaid
+
+# mermaid is used for visualization
+plugins:
+    - mermaid2
+
+extra_javascript:
+    - https://unpkg.com/mermaid/dist/mermaid.min.js
+
+copyright: Copyright &copy; 2024 Michael Kohlegger
+
+# Preamble
+
 # Navigation
 nav:
     - Home: index.md
@@ -30,30 +92,3 @@ nav:
     - Master Web Communication & Information Systems:
       - Mega-Tutorium RDBS: exercises/wcis_exercise_01_megatutorial.md
     - Über: about.md
-
-
-# Theme specification
-theme:
-  name: material
-  icon:
-    logo: material/database
-
-markdown_extensions:
-  - pymdownx.highlight:
-      linenums: true
-  - pymdownx.superfences:
-      # make exceptions to highlighting of code
-      # otherwise, mermaid images are shown as code
-      # box with regular syntax highlighting
-      custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: !!python/name:mermaid2.fence_mermaid
-
-# mermaid is used for visualization
-plugins:
-    - mermaid2
-
-extra_javascript:
-    - https://unpkg.com/mermaid/dist/mermaid.min.js
-
