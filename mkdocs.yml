@@ -1,6 +1,8 @@
 site_name: Data Book
 site_url: https://mckoh.github.io/data-book/
-site_dir: public
+docs_dir: docs_source
+site_dir: docs
+
 site_author: Michael Kohlegger
 copyright: © 2020, MK
 strict: false
